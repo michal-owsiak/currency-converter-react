@@ -3,22 +3,22 @@ import './App.css';
 function App() {
   return (
     <main>
-      <header class="header">
-        <h1 class="header__title">
+      <header className="header">
+        <h1 className="header__title">
           kalkulator walutowy
         </h1>
       </header>
-      <div class="formContainer">
-        <form class="form form js-form">
-          <fieldset class="form__fieldset">
+      <div className="formContainer">
+        <form className="form form">
+          <fieldset className="form__fieldset">
             <p>
               <label>
-                <div class="amountContainer">
-                  <span class="form__labelText">
+                <div className="amountContainer">
+                  <span className="form__labelText">
                     Kwota:
                   </span>
                   <input
-                    class="form__amountField js-amountElement"
+                    className="form__amountField"
                     type="number"
                     name="amount"
                     step="0.01"
@@ -28,14 +28,13 @@ function App() {
                 </div>
               </label>
             </p>
-
             <p>
               <label>
-                <div class="currenciesContainer">
-                  <span class="form__labelText form__labelText--currencies">
+                <div className="currenciesContainer">
+                  <span className="form__labelText form__labelText--currencies">
                     Przelicz z:
                   </span>
-                  <select class="form__currencyField js-currencyFrom"
+                  <select className="form__currencyField"
                     name="currencyFrom"
                   >
                     <option selected>PLN</option>
@@ -50,11 +49,11 @@ function App() {
             </p>
             <p>
               <label>
-                <div class="currenciesContainer">
-                  <span class="form__labelText form__labelText--currencies">
+                <div className="currenciesContainer">
+                  <span className="form__labelText form__labelText--currencies">
                     Przelicz na:
                   </span>
-                  <select class="form__currencyField js-currencyTo"
+                  <select className="form__currencyField"
                     name="currencyTo"
                   >
                     <option>PLN</option>
@@ -67,32 +66,32 @@ function App() {
                 </div>
               </label>
             </p>
-            <p class="form__currencyRate">
-              <span class="js-currencyFixed">
+            <p className="form__currencyRate">
+              <span>
                 1 PLN
               </span> =
-              <span class="js-currencyExchanged">
+              <span>
                 0.22 EUR
               </span>
             </p>
-            <div class="form__result">
+            <div className="form__result">
               <p>
-                <span class="form__result--from js-resultFrom">
+                <span className="form__result--from">
                   0.00
                 </span>
-                <span class="form__result--to js-resultTo" />
+                <span className="form__result--to" />
               </p>
             </div>
-            <div class="form__buttonsContainer">
+            <div className="form__buttonsContainer">
               <p>
-                <button class="form__button">
+                <button className="form__button">
                   Oblicz
                 </button>
               </p>
               <p>
                 <button
                   type="reset"
-                  class="form__button form__button--reset"
+                  className="form__button form__button--reset"
                 >
                   Resetuj
                 </button>
@@ -101,7 +100,7 @@ function App() {
           </fieldset>
         </form>
       </div>
-      <footer class="footer">
+      <footer className="footer">
         Kursy obliczane na podstawie danych z dnia 14.04.2023
       </footer>
     </main>
