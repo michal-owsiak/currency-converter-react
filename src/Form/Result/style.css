@@ -1,0 +1,12 @@
+.result {
+    padding: 10px 0 15px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: #266bff;
+}
+
+.result--from {
+    font-weight: 300;
+    color: #5e5e5e;
+}
