@@ -11,11 +11,15 @@ import { currencies } from './Form/currencies';
 function App() {
   const [result, setResult] = useState();
 
-  const calculateResult = (currencyFrom, currencyTo, amount) => {
+  const calculateRate = (currencyFrom, currencyTo) => {
     const rateFrom = currencies.find(({ name }) => name === currencyFrom).rate;
     const rateTo = currencies.find(({ name }) => name === currencyTo).rate;
 
-    const rate = rateFrom / rateTo;
+    return rateFrom / rateTo;
+  };
+
+  const calculateResult = (currencyFrom, currencyTo, amount) => {
+    const rate = calculateRate(currencyFrom, currencyTo);
     
     setResult({
       sourceAmount: +amount,
@@ -35,6 +39,7 @@ function App() {
           <Form 
             result={result}
             calculateResult={calculateResult}
+            calculateRate={calculateRate}
           />
         } 
       />

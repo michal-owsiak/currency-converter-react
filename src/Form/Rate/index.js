@@ -2,12 +2,7 @@ import "./style.css"
 
 const Rate = ({ currencyFrom, currencyTo, rate }) => (
   <p className="rate">
-    <span>
-      1 {currencyFrom}
-    </span> =
-    <span>
-      {rate} {currencyTo}
-    </span>
+    1 {currencyFrom} = {rate.toFixed(2)} {currencyTo}
   </p>
 );
 

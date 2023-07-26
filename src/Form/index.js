@@ -4,14 +4,17 @@ import { currencies } from "./currencies.js";
 import Result from "./Result";
 import Rate from "./Rate";
 
-const Form = ({ calculateResult, result }) => {
+const Form = ({ calculateRate, calculateResult, result }) => {
   const [currencyFrom, setCurrencyFrom] = useState(currencies[0].name);
   const [currencyTo, setCurrencyTo] = useState(currencies[1].name);
   const [amount, setAmount] = useState("");
 
+  const rate = calculateRate(currencyFrom, currencyTo);
+  
+
   const onSubmit = (event) => {
     event.preventDefault();
-    calculateResult (currencyFrom, currencyTo, amount)
+    calculateResult(currencyFrom, currencyTo, amount)
   };
 
   return (
@@ -85,14 +88,15 @@ const Form = ({ calculateResult, result }) => {
             </div>
           </label>
         </p>
-        <Rate 
+        <Rate
           currencyFrom={currencyFrom}
           currencyTo={currencyTo}
+          rate={rate}
         />
-        <Result result={result}/>
+        <Result result={result} />
         <div className="form__buttonsContainer">
           <p>
-            <button 
+            <button
               className="form__button"
             >
               Convert
