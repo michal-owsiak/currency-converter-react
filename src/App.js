@@ -1,15 +1,14 @@
 import './App.css';
+import Form from './Form';
+import Header from './Header';
+import Footer from './Footer';
 
 function App() {
   return (
     <main>
-      <header className="header">
-        <h1 className="header__title">
-          kalkulator walutowy
-        </h1>
-      </header>
+      <Header title="kalkulator walutowy" />
       <div className="formContainer">
-        <form className="form form">
+        <form className="form">
           <fieldset className="form__fieldset">
             <p>
               <label>
@@ -100,9 +99,7 @@ function App() {
           </fieldset>
         </form>
       </div>
-      <footer className="footer">
-        Kursy obliczane na podstawie danych z dnia 14.04.2023
-      </footer>
+      <Footer />
     </main>
   );
 }
