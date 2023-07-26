@@ -9,7 +9,7 @@ import { currencies } from './Form/currencies';
 
 
 function App() {
-  const [result, setResult] = useState();
+  const [result, setResult] = useState({});
 
   const calculateResult = (currencyFrom, currencyTo, amount) => {
     const rateFrom = currencies.find(({ name }) => name === currencyFrom).rate

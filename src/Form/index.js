@@ -44,14 +44,15 @@ const Form = ({ calculateResult, result }) => {
               <select
                 className="form__currencyField"
                 name="currencyFrom"
-                value={currencyFrom.name}
+                value={currencyFrom}
                 onChange={({ target }) => setCurrencyFrom(target.value)}
               >
-                {currencies.map((currencyFrom => (
+                {currencies.map((currency => (
                   <option
-                    key={currencyFrom.name}
+                    key={currency.name}
+                    value={currency.name}
                   >
-                    {currencyFrom.name}
+                    {currency.name}
                   </option>
                 )))}
               </select>
@@ -67,15 +68,16 @@ const Form = ({ calculateResult, result }) => {
               <select
                 className="form__currencyField"
                 name="currencyTo"
-                value={currencyTo.name}
+                value={currencyTo}
                 defaultValue="EUR"
                 onChange={({ target }) => setCurrencyTo(target.value)}
               >
-                {currencies.map((currencyTo => (
+                {currencies.map((currency => (
                   <option
-                    key={currencyTo.name}
+                    key={currency.name}
+                    value={currency.name}
                   >
-                    {currencyTo.name}
+                    {currency.name}
                   </option>
                 )))}
               </select>
