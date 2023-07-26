@@ -12,12 +12,14 @@ function App() {
   const [result, setResult] = useState();
 
   const calculateResult = (currencyFrom, currencyTo, amount) => {
-    const rateFrom = currencies.find(({ name }) => name === currencyFrom).rate
-    const rateTo = currencies.find(({ name }) => name === currencyTo).rate
+    const rateFrom = currencies.find(({ name }) => name === currencyFrom).rate;
+    const rateTo = currencies.find(({ name }) => name === currencyTo).rate;
 
+    const rate = rateFrom / rateTo;
+    
     setResult({
       sourceAmount: +amount,
-      calculatedAmount: (rateFrom / rateTo) * amount,
+      calculatedAmount: rate * amount,
       currencyFrom,
       currencyTo,
     });

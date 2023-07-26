@@ -2,6 +2,7 @@ import "./style.css";
 import { useState } from 'react';
 import { currencies } from "./currencies.js";
 import Result from "./Result";
+import Rate from "./Rate";
 
 const Form = ({ calculateResult, result }) => {
   const [currencyFrom, setCurrencyFrom] = useState(currencies[0].name);
@@ -84,14 +85,10 @@ const Form = ({ calculateResult, result }) => {
             </div>
           </label>
         </p>
-        <p className="form__currencyRate">
-          <span>
-            1 PLN
-          </span> =
-          <span>
-            0.22 EUR
-          </span>
-        </p>
+        <Rate 
+          currencyFrom={currencyFrom}
+          currencyTo={currencyTo}
+        />
         <Result result={result}/>
         <div className="form__buttonsContainer">
           <p>
