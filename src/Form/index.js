@@ -5,7 +5,7 @@ const Form = () => (
     <fieldset className="form__fieldset">
       <p>
         <label>
-          <div className="amountContainer">
+          <div className="form__amountContainer">
             <span className="form__labelText">
               Kwota:
             </span>
@@ -22,7 +22,7 @@ const Form = () => (
       </p>
       <p>
         <label>
-          <div className="currenciesContainer">
+          <div className="form__currenciesContainer">
             <span className="form__labelText form__labelText--currencies">
               Przelicz z:
             </span>
@@ -41,7 +41,7 @@ const Form = () => (
       </p>
       <p>
         <label>
-          <div className="currenciesContainer">
+          <div className="form__currenciesContainer">
             <span className="form__labelText form__labelText--currencies">
               Przelicz na:
             </span>
