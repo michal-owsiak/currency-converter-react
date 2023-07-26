@@ -1,8 +1,8 @@
 import "./style.css";
 
-const Footer = () => (
+const Footer = ({ info }) => (
   <footer className="footer">
-    Kursy obliczane na podstawie danych z dnia 14.04.2023
+    {info}
   </footer>
 );
 
