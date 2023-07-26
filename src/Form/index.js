@@ -7,7 +7,7 @@ const Form = () => (
         <label>
           <div className="form__amountContainer">
             <span className="form__labelText">
-              Kwota:
+              Amount
             </span>
             <input
               className="form__amountField"
@@ -24,7 +24,7 @@ const Form = () => (
         <label>
           <div className="form__currenciesContainer">
             <span className="form__labelText form__labelText--currencies">
-              Przelicz z:
+              From
             </span>
             <select className="form__currencyField"
               name="currencyFrom"
@@ -43,7 +43,7 @@ const Form = () => (
         <label>
           <div className="form__currenciesContainer">
             <span className="form__labelText form__labelText--currencies">
-              Przelicz na:
+              To
             </span>
             <select className="form__currencyField"
               name="currencyTo"
@@ -77,7 +77,7 @@ const Form = () => (
       <div className="form__buttonsContainer">
         <p>
           <button className="form__button">
-            Oblicz
+            Convert
           </button>
         </p>
         <p>
@@ -85,7 +85,7 @@ const Form = () => (
             type="reset"
             className="form__button form__button--reset"
           >
-            Resetuj
+            Reset
           </button>
         </p>
       </div>

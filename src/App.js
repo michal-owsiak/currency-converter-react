@@ -2,19 +2,19 @@ import './App.css';
 import Form from './Form';
 import Header from './Header';
 import Footer from './Footer';
-import FormContainer from './FormContainer';
+import Container from './Container';
 
 function App() {
   return (
     <main>
       <Header
-        title="kalkulator walutowy"
+        title="currency converter"
       />
-      <FormContainer
+      <Container
         content={<Form />}
       />
       <Footer
-        info="Kursy obliczane na podstawie danych z dnia 14.04.2023"
+        info="Rates calculated based on data as of 14.04.2023"
       />
     </main>
   );
