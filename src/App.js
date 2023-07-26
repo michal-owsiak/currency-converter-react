@@ -9,7 +9,7 @@ function App() {
     <main>
       <Header title="currency converter" />
       <Container content={<Form />} />
-      <Footer info="Rates calculated based on data as of 14.04.2023" />
+      <Footer info="Rates calculated based on data as of 26.07.2023" />
     </main>
   );
 }
