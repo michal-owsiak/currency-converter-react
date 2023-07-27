@@ -29,6 +29,10 @@ function App() {
     });
   };
 
+  const initResult = () => {
+    setResult(undefined);
+  };
+
   return (
     <main>
       <Header 
@@ -40,6 +44,7 @@ function App() {
             result={result}
             calculateResult={calculateResult}
             calculateRate={calculateRate}
+            initResult={initResult}
           />
         } 
       />

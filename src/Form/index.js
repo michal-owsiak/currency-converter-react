@@ -4,17 +4,29 @@ import { currencies } from "./currencies.js";
 import Result from "./Result";
 import Rate from "./Rate";
 
-const Form = ({ calculateRate, calculateResult, result }) => {
+const Form = ({ calculateRate, calculateResult, initResult, result }) => {
+  const initialState = {
+    currencyFrom: currencies[0].name,
+    currencyTo: currencies[1].name,
+    amount: ""
+  };
+
   const [currencyFrom, setCurrencyFrom] = useState(currencies[0].name);
   const [currencyTo, setCurrencyTo] = useState(currencies[1].name);
   const [amount, setAmount] = useState("");
 
   const rate = calculateRate(currencyFrom, currencyTo);
-  
 
   const onSubmit = (event) => {
     event.preventDefault();
     calculateResult(currencyFrom, currencyTo, amount)
+  };
+
+  const onReset = () => {
+    setCurrencyFrom(initialState.currencyFrom);
+    setCurrencyTo(initialState.currencyTo);
+    setAmount(initialState.amount);
+    initResult();
   };
 
   return (
@@ -72,7 +84,6 @@ const Form = ({ calculateRate, calculateResult, result }) => {
               <select
                 className="form__currencyField"
                 name="currencyTo"
-                value={currencyTo}
                 defaultValue="EUR"
                 onChange={({ target }) => setCurrencyTo(target.value)}
               >
@@ -93,11 +104,14 @@ const Form = ({ calculateRate, calculateResult, result }) => {
           currencyTo={currencyTo}
           rate={rate}
         />
-        <Result result={result} />
+        <Result 
+          result={result}
+        />
         <div className="form__buttonsContainer">
           <p>
             <button
               className="form__button"
+              type="submit"
             >
               Convert
             </button>
@@ -106,6 +120,7 @@ const Form = ({ calculateRate, calculateResult, result }) => {
             <button
               type="reset"
               className="form__button form__button--reset"
+              onClick={onReset}
             >
               Reset
             </button>
