@@ -5,3 +5,10 @@
     color: #266bff;
     margin: 0;
 }
+
+@media (max-width: 767px) {
+    .rate {
+        display: flex;
+        justify-content: center;
+    }
+}
