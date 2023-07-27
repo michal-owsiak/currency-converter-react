@@ -1,12 +1,32 @@
-# Currency converter in react.js
+# Currency Converter in React.js
 
 *This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
 
-My first simple web application that can convert given amount between 6 currencies. For now it is based on fixed currency rates but in the future it's gonna use API.
+My first simple web application that can convert given amount of money between 6 currencies. For now it's based on fixed currency rates but in the future it's gonna use API.
 
 ## Demo
 
-[CLICK HERE](https://michal-owsiak.github.io/currency-converter-react/) and try it!
+[CLICK HERE](https://michal-owsiak.github.io/currency-converter-react/) and try it on your own, or see a demonstration below:
+
+![demo](https://github.com/michal-owsiak/currency-converter-react/blob/main/public/demo.gif?raw=true)
+
+## Tools used
+
+### Languages
+
+- JavaScript (ES6+) with JSX Syntax
+- CSS
+- HTML
+
+### Libraries & environments
+
+- React.js
+- Node.js
+
+### Methodologies
+
+- BEM naming convention
+
 
 ## Available Scripts
 
