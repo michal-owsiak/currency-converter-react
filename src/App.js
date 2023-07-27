@@ -6,8 +6,6 @@ import Container from './Container';
 import { useState } from 'react';
 import { currencies } from './Form/currencies';
 
-
-
 function App() {
   const [result, setResult] = useState();
 

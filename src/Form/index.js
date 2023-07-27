@@ -102,15 +102,12 @@ const Form = ({ calculateRate, calculateResult, initResult, result }) => {
           result={result}
         />
         <div className="form__buttonsContainer">
-          <p>
             <button
               className="form__button"
               type="submit"
             >
               Convert
             </button>
-          </p>
-          <p>
             <button
               type="reset"
               className="form__button form__button--reset"
@@ -118,7 +115,6 @@ const Form = ({ calculateRate, calculateResult, initResult, result }) => {
             >
               Reset
             </button>
-          </p>
         </div>
       </fieldset>
     </form>
