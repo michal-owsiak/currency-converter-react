@@ -9,10 +9,16 @@ const Result = ({ result }) => (
     ) : (
       <>
         <span className="result--from">
-          {result.sourceAmount.toFixed(2)} {result.currencyFrom} = {""}
+          <span className="result--non-breaking">
+            {result.sourceAmount.toFixed(2)}
+          </span>
+          &nbsp;{result.currencyFrom}&nbsp;= {""}
         </span>
         <span className="result--to">
-          {result.calculatedAmount.toFixed(2)} {result.currencyTo}
+          <span className="result--non-breaking">
+            {result.calculatedAmount.toFixed(2)}
+          </span>
+          &nbsp;{result.currencyTo}
         </span>
       </>
     )}

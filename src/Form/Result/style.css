@@ -5,9 +5,14 @@
     font-weight: 700;
     color: #266bff;
     margin: 32px auto 36px;
+    line-height: 1.4;
 }
 
 .result--from {
     font-weight: 300;
     color: #5e5e5e;
+}
+
+.result--non-breaking {
+    word-break: break-word;
 }
