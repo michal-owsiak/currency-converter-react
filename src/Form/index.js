@@ -33,7 +33,7 @@ const Form = ({ calculateRate, calculateResult, initResult, result }) => {
     <form className="form" onSubmit={onSubmit}>
       <fieldset className="form__fieldset">
         <label>
-          <div className="form__amountContainer">
+          <div className="form__container">
             <span className="form__labelText">
               Amount
             </span>
@@ -50,7 +50,7 @@ const Form = ({ calculateRate, calculateResult, initResult, result }) => {
           </div>
         </label>
         <label>
-          <div className="form__currenciesContainer">
+          <div className="form__container form__container--currencies">
             <span className="form__labelText form__labelText--currencies">
               From
             </span>
@@ -72,7 +72,7 @@ const Form = ({ calculateRate, calculateResult, initResult, result }) => {
           </div>
         </label>
         <label>
-          <div className="form__currenciesContainer">
+          <div className="form__container form__container--currencies">
             <span className="form__labelText form__labelText--currencies">
               To
             </span>
