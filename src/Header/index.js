@@ -1,9 +1,9 @@
 import "./style.css";
 
-const Header = ({ title }) => (
+const Header = () => (
 <header>
   <h1 className="header">
-    {title}
+    currency converter
   </h1>
 </header>
 );

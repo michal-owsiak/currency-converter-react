@@ -33,9 +33,7 @@ function App() {
 
   return (
     <main>
-      <Header 
-        title="currency converter" 
-      />
+      <Header />
       <Container 
         content={
           <Form 
@@ -46,9 +44,7 @@ function App() {
           />
         } 
       />
-      <Footer
-        info="Rates calculated based on data as of 26.07.2023" 
-      />
+      <Footer/>
     </main>
   );
 };
