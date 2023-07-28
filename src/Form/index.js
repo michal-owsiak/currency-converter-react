@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { currencies } from "./currencies.js";
 import Result from "./Result";
 import Rate from "./Rate";
+import Time from "./Time";
 
 const Form = ({ calculateRate, calculateResult, initResult, result }) => {
   const initialState = {
@@ -102,20 +103,21 @@ const Form = ({ calculateRate, calculateResult, initResult, result }) => {
           result={result}
         />
         <div className="form__buttonsContainer">
-            <button
-              className="form__button"
-              type="submit"
-            >
-              Convert
-            </button>
-            <button
-              type="reset"
-              className="form__button form__button--reset"
-              onClick={onReset}
-            >
-              Reset
-            </button>
+          <button
+            className="form__button"
+            type="submit"
+          >
+            Convert
+          </button>
+          <button
+            type="reset"
+            className="form__button form__button--reset"
+            onClick={onReset}
+          >
+            Reset
+          </button>
         </div>
+        {/* <Time /> */}
       </fieldset>
     </form>
   );
