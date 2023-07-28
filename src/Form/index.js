@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { currencies } from "./currencies.js";
 import Result from "./Result";
 import Rate from "./Rate";
-import Time from "./Time";
 
 const Form = ({ calculateRate, calculateResult, initResult, result }) => {
   const initialState = {
@@ -117,7 +116,6 @@ const Form = ({ calculateRate, calculateResult, initResult, result }) => {
             Reset
           </button>
         </div>
-        {/* <Time /> */}
       </fieldset>
     </form>
   );
