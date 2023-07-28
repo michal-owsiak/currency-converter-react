@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { currencies } from './Form/currencies';
 
 function App() {
-  const [result, setResult] = useState();
+  const [result, setResult] = useState(null);
 
   const calculateRate = (currencyFrom, currencyTo) => {
     const rateFrom = currencies.find(({ name }) => name === currencyFrom).rate;

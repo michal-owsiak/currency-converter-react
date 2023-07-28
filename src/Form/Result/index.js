@@ -2,7 +2,7 @@ import "./style.css"
 
 const Result = ({ result }) => (
   <p className="result">
-    {result === undefined ? (
+    {!result ? (
       <span className="result--from">
         0.00
       </span>
