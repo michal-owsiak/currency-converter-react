@@ -107,6 +107,7 @@
 
 .form__button {
   display: block;
+  cursor: pointer;
   width: 90%;
   height: 55px;
   color: white;
