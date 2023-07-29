@@ -10,9 +10,7 @@ body {
   font-size: 14px;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  margin: auto;
-  width: 90%;
   background-image: url("../public/background.png");
   background-size: cover;
-  transform: scale(0.9);
+  transform: scale(0.88);
 }
