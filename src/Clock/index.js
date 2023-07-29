@@ -14,22 +14,20 @@ const Clock = () => {
     };
   }, []);
 
-  const clockCaption = (
-    <div className="clock__container">
-      <div className="clock">
-        <span className="clock__date">
-          Today is {clock.toLocaleString("en-US", {
-            weekday: "long", month: "long", day: "numeric",
-          })},
-        </span>
-        <span className="clock__hour">
-          {clock.toLocaleTimeString()}
-        </span>
-      </div>
+  const clockDisplay = (
+    <div className="clock">
+      <span>
+        Today is {clock.toLocaleString("en-US", {
+          weekday: "long", month: "long", day: "numeric",
+        })}
+      </span>
+      <span>
+        {clock.toLocaleTimeString()}
+      </span>
     </div>
   );
 
-  return (clockCaption);
+  return (clockDisplay);
 };
 
 export default Clock;
