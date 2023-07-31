@@ -8,7 +8,7 @@ My first simple web application that can convert given amount of money between 6
 
 [CLICK HERE](https://michal-owsiak.github.io/currency-converter-react/) and try it on your own, or see a demonstration below:
 
-![demo](https://github.com/michal-owsiak/currency-converter-react/blob/main/public/demo.gif?raw=true)
+![demo](https://github.com/michal-owsiak/currency-converter-react/blob/main/demo.gif?raw=true)
 
 ## Tools used
 
