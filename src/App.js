@@ -1,4 +1,4 @@
-import './App.css';
+import { GlobalStyle } from "./styled";
 import Form from './Form';
 import Header from './Header';
 import Footer from './Footer';
@@ -33,7 +33,8 @@ function App() {
   };
 
   return (
-    <main>
+    <>
+    <GlobalStyle />
       <Header />
       <Clock />
       <Container 
@@ -47,7 +48,7 @@ function App() {
         } 
       />
       <Footer/>
-    </main>
+    </>
   );
 };
 

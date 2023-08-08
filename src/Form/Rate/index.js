@@ -1,9 +1,9 @@
-import "./style.css"
+import { StyledRate } from "./styled";
 
 const Rate = ({ currencyFrom, currencyTo, rate }) => (
-  <p className="rate">
+  <StyledRate>
     1 {currencyFrom} = {rate.toFixed(2)} {currencyTo}
-  </p>
+  </StyledRate>
 );
 
 export default Rate;

@@ -1,4 +1,13 @@
-import "./style.css";
+import { 
+  Fieldset, 
+  Container, 
+  CurrenciesContainer, 
+  ButtonsContainer, 
+  LabelText, 
+  Input, 
+  Select, 
+  Button 
+} from "./styled";
 import { useState } from 'react';
 import { currencies } from "./currencies.js";
 import Result from "./Result";
@@ -30,35 +39,31 @@ const Form = ({ calculateRate, calculateResult, initResult, result }) => {
   };
 
   return (
-    <form className="form" onSubmit={onSubmit}>
-      <fieldset className="form__fieldset">
+    <form onSubmit={onSubmit}>
+      <Fieldset>
         <label>
-          <div className="form__container">
-            <span className="form__labelText">
-              Amount
-            </span>
-            <input
+          <Container>
+            <LabelText>Amount</LabelText>
+            <Input
               value={amount}
-              onChange={({ target }) => setAmount(target.value)}
-              className="form__amountField"
+              onChange={({ target }) => 
+                setAmount(target.value)}
               type="number"
               name="amount"
               step="0.01"
               min="0"
               placeholder="0.00"
             />
-          </div>
+          </Container>
         </label>
         <label>
-          <div className="form__container form__container--currencies">
-            <span className="form__labelText form__labelText--currencies">
-              From
-            </span>
-            <select
-              className="form__currencyField"
+          <CurrenciesContainer>
+            <LabelText>From</LabelText>
+            <Select
               name="currencyFrom"
               value={currencyFrom}
-              onChange={({ target }) => setCurrencyFrom(target.value)}
+              onChange={({ target }) => 
+                setCurrencyFrom(target.value)}
             >
               {currencies.map((currency => (
                 <option
@@ -68,16 +73,13 @@ const Form = ({ calculateRate, calculateResult, initResult, result }) => {
                   {currency.name}
                 </option>
               )))}
-            </select>
-          </div>
+            </Select>
+          </CurrenciesContainer>
         </label>
         <label>
-          <div className="form__container form__container--currencies">
-            <span className="form__labelText form__labelText--currencies">
-              To
-            </span>
-            <select
-              className="form__currencyField"
+          <CurrenciesContainer>
+            <LabelText>To</LabelText>
+            <Select
               name="currencyTo"
               defaultValue="EUR"
               onChange={({ target }) => setCurrencyTo(target.value)}
@@ -90,8 +92,8 @@ const Form = ({ calculateRate, calculateResult, initResult, result }) => {
                   {currency.name}
                 </option>
               )))}
-            </select>
-          </div>
+            </Select>
+          </CurrenciesContainer>
         </label>
         <Rate
           currencyFrom={currencyFrom}
@@ -101,22 +103,20 @@ const Form = ({ calculateRate, calculateResult, initResult, result }) => {
         <Result
           result={result}
         />
-        <div className="form__buttonsContainer">
-          <button
-            className="form__button"
-            type="submit"
-          >
+        <ButtonsContainer>
+          <Button type="submit">
             Convert
-          </button>
-          <button
+          </Button>
+          <Button
+            reset
             type="reset"
             className="form__button form__button--reset"
             onClick={onReset}
           >
             Reset
-          </button>
-        </div>
-      </fieldset>
+          </Button>
+        </ButtonsContainer>
+      </Fieldset>
     </form>
   );
 };

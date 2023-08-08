@@ -1,5 +1,5 @@
-import "./style.css"
 import React, { useState, useEffect } from "react";
+import { StyledClock } from "./styled";
 
 const Clock = () => {
   const [clock, setClock] = useState(new Date());
@@ -15,7 +15,7 @@ const Clock = () => {
   }, []);
 
   const clockDisplay = (
-    <div className="clock">
+    <StyledClock>
       <span>
         Today is {clock.toLocaleString("en-US", {
           weekday: "long", month: "long", day: "numeric",
@@ -24,7 +24,7 @@ const Clock = () => {
       <span>
         {clock.toLocaleTimeString()}
       </span>
-    </div>
+    </StyledClock>
   );
 
   return (clockDisplay);

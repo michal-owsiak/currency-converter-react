@@ -1,11 +1,9 @@
-import "./style.css";
+import { StyledHeader } from "./styled";
 
 const Header = () => (
-<header>
-  <h1 className="header">
-    Currency Converter
-  </h1>
-</header>
+  <StyledHeader>
+      Currency Converter
+  </StyledHeader>
 );
 
 export default Header;

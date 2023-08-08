@@ -1,28 +1,30 @@
-import "./style.css"
+import { StyledResult, ResultFrom, BreakingCaption } from "./styled";
 
 const Result = ({ result }) => (
-  <p className="result">
+  <>
     {!result ? (
-      <span className="result--from">
-        0.00
-      </span>
+      <StyledResult>
+        <ResultFrom>
+          0.00
+        </ResultFrom>
+      </StyledResult>
     ) : (
       <>
-        <span className="result--from">
-          <span className="result--nonbreaking">
-            {result.sourceAmount.toFixed(2)}
-          </span>
-          &nbsp;{result.currencyFrom}&nbsp;= {""}
-        </span>
-        <span className="result--to">
-          <span className="result--nonbreaking">
+        <StyledResult>
+          <ResultFrom>
+            <BreakingCaption>
+              {result.sourceAmount.toFixed(2)}
+            </BreakingCaption>
+            &nbsp;{result.currencyFrom}&nbsp;= {""}
+          </ResultFrom>
+          <BreakingCaption>
             {result.calculatedAmount.toFixed(2)}
-          </span>
+          </BreakingCaption>
           &nbsp;{result.currencyTo}
-        </span>
+        </StyledResult>
       </>
     )}
-  </p>
+  </>
 );
 
 export default Result;

@@ -1,9 +1,9 @@
-import "./style.css";
+import { StyledFooter } from "./styled";
 
 const Footer = () => (
-  <footer className="footer">
+  <StyledFooter>
     Rates calculated based on data as of 26.07.2023
-  </footer>
+  </StyledFooter>
 );
 
 export default Footer;
