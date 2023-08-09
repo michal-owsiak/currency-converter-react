@@ -22,11 +22,7 @@ My first simple web application that can convert given amount of money between 6
 
 - React.js
 - Node.js
-
-### Methodologies
-
-- BEM naming convention
-
+- styled-components
 
 ## Available Scripts
 
