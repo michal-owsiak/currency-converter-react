@@ -1,19 +1,9 @@
-import React, { useState, useEffect } from "react";
 import { StyledClock } from "./styled";
+import { useCurrentDate } from "./useCurrentDate";
 
 const Clock = () => {
-  const [clock, setClock] = useState(new Date());
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setClock(new Date());
-    }, 1000);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
-
+  const clock = useCurrentDate();
+  
   const clockDisplay = (
     <StyledClock>
       <span>
