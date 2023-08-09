@@ -8,7 +8,9 @@ const Clock = () => {
     <StyledClock>
       <span>
         Today is {clock.toLocaleString("en-US", {
-          weekday: "long", month: "long", day: "numeric",
+          weekday: "long", 
+          month: "long", 
+          day: "numeric",
         })}
       </span>
       <span>
