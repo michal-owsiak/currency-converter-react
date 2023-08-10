@@ -5,7 +5,7 @@ export const StyledHeader = styled.h1`
   font-size: 44px;
   text-align: center;
   font-weight: 600;
-  color: white;
+  color: ${({ theme }) => theme.color.white};
   margin: 8px auto;
   line-height: 0.88;
 `;

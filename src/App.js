@@ -1,4 +1,3 @@
-import { GlobalStyle } from "./styled";
 import Form from './Form';
 import Header from './Header';
 import Footer from './Footer';
@@ -34,7 +33,6 @@ function App() {
 
   return (
     <>
-    <GlobalStyle />
       <Header />
       <Clock />
       <Container 

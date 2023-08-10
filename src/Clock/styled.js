@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledClock = styled.div`
   font-size: 12px;
-  color: white;
+  color: ${({ theme }) => theme.color.white};
   display: flex;
   flex-direction: column;
   align-items: center;

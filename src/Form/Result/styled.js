@@ -5,14 +5,14 @@ export const StyledResult = styled.p`
   text-align: center;
   font-size: 25px;
 	font-weight: 700;
-  color: #266bff;
+  color: ${({ theme }) => theme.color.dodgerBlue};
   margin: 32px auto 36px;
   line-height: 1.4;
 `;
 
 export const ResultFrom = styled.span`
 	font-weight: 300;
-  color: #5e5e5e;
+  color: ${({ theme }) => theme.color.scorpion};
 `;
 
 export const BreakingCaption = styled.span`

@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
 
 export const Fieldset = styled.fieldset`
-  background-color: white;
-  border: solid white;
+  background: ${({ theme }) => theme.color.white};
+  border: solid ${({ theme }) => theme.color.white};
   border-radius: 10px;
   padding: 16px 13% 10px;
 
-	@media (max-width: 767px) {
+	@media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 16px 40px 10px;
 	}
 `;
@@ -17,7 +17,7 @@ export const Container = styled.div`
   grid-template-columns: 80px 1fr;
   grid-gap: 50px;
 
-	@media (max-width: 767px) {
+	@media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     grid-template-columns: 1fr;
     grid-gap: 16px;
   }
@@ -30,21 +30,21 @@ export const CurrenciesContainer = styled(Container)`
 export const LabelText = styled.span`
 	font-size: 13px;
   font-weight: 500;
-  color: #5e5e5e;
+  color: ${({ theme }) => theme.color.scorpion};
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-	@media (max-width: 767px) {
+	@media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
   	text-align: center;
   }
 `;
 
 export const Input = styled.input`
-	color: #366bff;
-  background-color: white;
+	color: ${({ theme }) => theme.color.dodgerBlue};
+  background: ${({ theme }) => theme.color.white};
   border: 0;
-  border-bottom: 2px solid hsl(224, 100%, 61%);
+  border-bottom: 2px solid ${({ theme }) => theme.color.dodgerBlue};
   padding: 13px;
   width: 100%;
   font-size: 20px;
@@ -53,30 +53,30 @@ export const Input = styled.input`
   text-align: center;
 
 	&:hover {
-		background-color: #f3f7ff;
+		background: ${({ theme }) => theme.color.zircon};
   	transition: background-color 0.5s ease;
 	}
 `;
 
 export const Select = styled.select`
-	border: 1.5px solid #cccaca;
+	border: 1.5px solid ${({ theme }) => theme.color.silver};
   border-radius: 6px;
   width: 100%;
   padding: 12px;
   font-size: 14px;
   font-weight: 700;
-  color: #4c4c4c;
-  background-color: white;
-  outline-color: #0051ff;
+  color: ${({ theme }) => theme.color.tundora};
+  background: ${({ theme }) => theme.color.white};
+  outline: ${({ theme }) => theme.color.dodgerBlue};
   text-align: center;
 
 	&:hover {
-		background-color: #f3f7ff;
-  	border: 1.5px solid #0051ff;
+		background: ${({ theme }) => theme.color.zircon};
+  	border: 1.5px solid ${({ theme }) => theme.color.dodgerBlue};
   	transition: all 0.5s ease;
 	}
 
-	@media (max-width: 767px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 12px 12px 12px 24px;
   }
 `;
@@ -90,33 +90,33 @@ export const Button = styled.button`
   cursor: pointer;
   width: 90%;
   height: 55px;
-  color: white;
-  border: 1.5px solid #0051ff;
+  color: ${({ theme }) => theme.color.white};
+  border: 1.5px solid ${({ theme }) => theme.color.blueRibbon};
   border-radius: 50px;
-  background-color: #0051ff;
+  background: ${({ theme }) => theme.color.blueRibbon};
   padding: 12px 36px;
   font-weight: 600;
   font-size: 15px;
   margin: 12px auto;
 	
 	&:hover {
-		background-color: #003cbd;
+		background-color: ${({ theme }) => theme.color.cobalt};
   	transition: all 0.5s ease;
-  	border: 1.5px solid #003cbd;
+  	border: 1.5px solid ${({ theme }) => theme.color.cobalt};
 	}
 
 	${({ reset }) => reset && css`
-		color: #266bff;
-		background-color: white;
+		color: ${({ theme }) => theme.color.dodgerBlue};
+		background: ${({ theme }) => theme.color.white};
 		font-weight: 700;
 		transition: all 0.5s ease;
 
 		&:hover {
-			color: white;
+			color: ${({ theme }) => theme.color.white};
 		}
 	`}
 
-	@media (max-width: 767px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     width: 100%;
   }
 `;
