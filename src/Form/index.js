@@ -6,7 +6,8 @@ import {
   LabelText, 
   Input, 
   Select, 
-  Button 
+  Button,
+  ResetButton
 } from "./styled";
 import { useState } from 'react';
 import { currencies } from "./currencies.js";
@@ -104,17 +105,12 @@ const Form = ({ calculateRate, calculateResult, initResult, result }) => {
           result={result}
         />
         <ButtonsContainer>
-          <Button type="submit">
+          <Button>
             Convert
           </Button>
-          <Button
-            reset
-            type="reset"
-            className="form__button form__button--reset"
-            onClick={onReset}
-          >
+          <ResetButton onClick={onReset}>
             Reset
-          </Button>
+          </ResetButton>
         </ButtonsContainer>
       </Fieldset>
     </form>

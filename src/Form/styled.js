@@ -100,23 +100,23 @@ export const Button = styled.button`
   margin: 12px auto;
 	
 	&:hover {
-		background-color: ${({ theme }) => theme.color.cobalt};
+		background: ${({ theme }) => theme.color.cobalt};
   	transition: all 0.5s ease;
   	border: 1.5px solid ${({ theme }) => theme.color.cobalt};
 	}
 
-	${({ reset }) => reset && css`
-		color: ${({ theme }) => theme.color.dodgerBlue};
-		background: ${({ theme }) => theme.color.white};
-		font-weight: 700;
-		transition: all 0.5s ease;
-
-		&:hover {
-			color: ${({ theme }) => theme.color.white};
-		}
-	`}
-
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     width: 100%;
+  }
+`;
+
+export const ResetButton = styled(Button)`
+  color: ${({ theme }) => theme.color.dodgerBlue};
+  background: ${({ theme }) => theme.color.white};
+  font-weight: 700;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: ${({ theme }) => theme.color.white};
   }
 `;
