@@ -1,10 +1,10 @@
 import Form from './Form';
 import Header from './Header';
 import Footer from './Footer';
-import Container from './Container';
 import { useState } from 'react';
 import { currencies } from './Form/currencies';
 import Clock from './Clock';
+import { Container } from "./Container/styled";
 
 function App() {
   const [result, setResult] = useState(null);
@@ -35,16 +35,14 @@ function App() {
     <>
       <Header />
       <Clock />
-      <Container 
-        content={
+      <Container>
           <Form 
             result={result}
             calculateResult={calculateResult}
             calculateRate={calculateRate}
             initResult={initResult}
           />
-        } 
-      />
+      </Container>
       <Footer/>
     </>
   );
