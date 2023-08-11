@@ -12,12 +12,12 @@ import {
 import { useState } from "react";
 import Result from "./Result";
 import Rate from "./Rate";
-import { useAPIRates } from "./useAPIRates";
 import Loading from "./Loading";
 import Header from "./Header";
 import Clock from "./Clock";
 import Footer from "./Footer"
-
+import { useAPIRates } from "./useAPIRates";
+import { currencyLabels } from "./currencyLabels"
 
 const Form = () => {
   const APIRates = useAPIRates();
@@ -114,7 +114,9 @@ const Form = () => {
                     key={currency}
                     value={currency}
                   >
-                    {currency}
+                    {typeof currencyLabels[currency] === "function"
+                      ? currencyLabels[currency]()
+                      : currencyLabels[currency]}
                   </option>
                 )))}
               </Select>
@@ -133,7 +135,7 @@ const Form = () => {
                     key={currency}
                     value={currency}
                   >
-                    {currency}
+                    {currencyLabels[currency]}
                   </option>
                 )))}
               </Select>

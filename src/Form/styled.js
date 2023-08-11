@@ -64,7 +64,7 @@ export const Select = styled.select`
   width: 100%;
   padding: 10px;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   color: ${({ theme }) => theme.color.tundora};
   background: ${({ theme }) => theme.color.white};
   outline: ${({ theme }) => theme.color.dodgerBlue};
