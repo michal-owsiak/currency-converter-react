@@ -16,5 +16,4 @@ body {
   font-weight: 500;
   background-image: url(${background});
   background-size: cover;
-  transform: scale(0.88); 
 }`

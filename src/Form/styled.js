@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const Fieldset = styled.fieldset`
   background: ${({ theme }) => theme.color.white};
@@ -7,15 +7,15 @@ export const Fieldset = styled.fieldset`
   padding: 16px 13% 10px;
 
 	@media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-    padding: 16px 40px 10px;
+    padding: 16px 30px 10px;
 	}
 `;
 
 export const Container = styled.div`
-	padding: 34px 0 24px;
+	padding: 24px 0 24px;
   display: grid;
   grid-template-columns: 80px 1fr;
-  grid-gap: 50px;
+  grid-gap: 34px;
 
 	@media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     grid-template-columns: 1fr;
@@ -28,7 +28,7 @@ export const CurrenciesContainer = styled(Container)`
 `;
 
 export const LabelText = styled.span`
-	font-size: 13px;
+	font-size: 11px;
   font-weight: 500;
   color: ${({ theme }) => theme.color.scorpion};
   display: flex;
@@ -47,7 +47,7 @@ export const Input = styled.input`
   border-bottom: 2px solid ${({ theme }) => theme.color.dodgerBlue};
   padding: 13px;
   width: 100%;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   outline: none;
   text-align: center;
@@ -62,8 +62,8 @@ export const Select = styled.select`
 	border: 1.5px solid ${({ theme }) => theme.color.silver};
   border-radius: 6px;
   width: 100%;
-  padding: 12px;
-  font-size: 14px;
+  padding: 10px;
+  font-size: 13px;
   font-weight: 700;
   color: ${({ theme }) => theme.color.tundora};
   background: ${({ theme }) => theme.color.white};
@@ -94,10 +94,10 @@ export const Button = styled.button`
   border: 1.5px solid ${({ theme }) => theme.color.blueRibbon};
   border-radius: 50px;
   background: ${({ theme }) => theme.color.blueRibbon};
-  padding: 12px 36px;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
   margin: 12px auto;
+  height: 48px;
 	
 	&:hover {
 		background: ${({ theme }) => theme.color.cobalt};
