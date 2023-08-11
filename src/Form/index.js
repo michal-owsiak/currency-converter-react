@@ -23,19 +23,19 @@ import { currencyLabels } from "./currencyLabels"
 const Form = () => {
   const { APIRates, error } = useAPIRates();
 
-  const [currencyFrom, setCurrencyFrom] = useState("PLN");
-  const [currencyTo, setCurrencyTo] = useState("EUR");
+  const [currencyFrom, setCurrencyFrom] = useState("EUR");
+  const [currencyTo, setCurrencyTo] = useState("PLN");
   const [amount, setAmount] = useState("");
 
   const [result, setResult] = useState(null);
 
-  const calculateRate = (currencyFrom, currencyTo) => {
+  const calculateRate = (currencyFrom, currencyTo) => {    
     if (!APIRates.rates) {
       return 0;
     }
 
-    const rateFrom = APIRates.rates[currencyFrom];
-    const rateTo = APIRates.rates[currencyTo];
+    const rateFrom = 1 / APIRates.rates[currencyFrom];
+    const rateTo = 1 / APIRates.rates[currencyTo];
 
     return rateFrom / rateTo;
   };
@@ -110,7 +110,7 @@ const Form = () => {
               <LabelText>From</LabelText>
               <Select
                 name="currencyFrom"
-                value={currencyFrom}
+                defaultValue="EUR"
                 onChange={({ target }) =>
                   setCurrencyFrom(target.value)}
               >
@@ -132,7 +132,7 @@ const Form = () => {
               <LabelText>To</LabelText>
               <Select
                 name="currencyTo"
-                defaultValue="EUR"
+                defaultValue="PLN"
                 onChange={({ target }) => setCurrencyTo(target.value)}
               >
                 {!!APIRates.rates && Object.keys(APIRates.rates).map((currency => (
