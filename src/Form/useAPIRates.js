@@ -3,6 +3,7 @@ import axios from "axios";
 
 export const useAPIRates = () => {
   const [APIRates, setAPIRates] = useState("");
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const getRates = async () => {
@@ -19,15 +20,12 @@ export const useAPIRates = () => {
         });
       } catch (error) {
         console.error("Error fetching exchange rates:", error);
-        setAPIRates({
-        });
+        setError(error);
       }
     };
 
     setTimeout(getRates, 1000);
   }, []);
 
-  console.log(APIRates);
-
-  return APIRates;
+  return { APIRates, error };
 };

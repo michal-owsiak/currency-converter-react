@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledLoading = styled.p`
   color: ${({ theme }) => theme.color.white};
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 400;
   display: flex;
   flex-direction: column;

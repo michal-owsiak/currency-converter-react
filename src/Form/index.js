@@ -13,6 +13,7 @@ import { useState } from "react";
 import Result from "./Result";
 import Rate from "./Rate";
 import Loading from "./Loading";
+import Failure from "./Failure";
 import Header from "./Header";
 import Clock from "./Clock";
 import Footer from "./Footer"
@@ -20,7 +21,7 @@ import { useAPIRates } from "./useAPIRates";
 import { currencyLabels } from "./currencyLabels"
 
 const Form = () => {
-  const APIRates = useAPIRates();
+  const { APIRates, error } = useAPIRates();
 
   const [currencyFrom, setCurrencyFrom] = useState("PLN");
   const [currencyTo, setCurrencyTo] = useState("EUR");
@@ -73,6 +74,10 @@ const Form = () => {
   //   setAmount(initialState.amount);
   //   initResult();
   // };
+
+  if (error) {
+    return <Failure />;
+  }
 
   if (!APIRates.rates) {
     return <Loading />;
