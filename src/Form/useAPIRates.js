@@ -11,10 +11,11 @@ export const useAPIRates = () => {
           "https://api.exchangerate.host/latest?symbols=AUD,CAD,CHF,CNH,EUR,GBP,JPY,PLN,USD"
         );
 
-        const { rates } = response.data;
+        const { rates, date } = response.data;
 
         setAPIRates({
-          rates
+          rates,
+          date
         });
       } catch (error) {
         console.error("Error fetching exchange rates:", error);

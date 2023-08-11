@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledClock = styled.div`
-  font-size: 10px;
+  font-size: 11px;
   color: ${({ theme }) => theme.color.white};
   display: flex;
   flex-direction: column;

@@ -9,13 +9,14 @@ import {
   Button,
   ResetButton
 } from "./styled";
-import { useState } from 'react';
+import { useState } from "react";
 import Result from "./Result";
 import Rate from "./Rate";
-import { useAPIRates } from './useAPIRates';
+import { useAPIRates } from "./useAPIRates";
 import Loading from "./Loading";
-import Header from './Header';
-import Clock from './Clock';
+import Header from "./Header";
+import Clock from "./Clock";
+import Footer from "./Footer"
 
 
 const Form = () => {
@@ -156,7 +157,7 @@ const Form = () => {
           </ButtonsContainer>
         </Fieldset>
       </form>
-      {/* <Footer/> */}
+      <Footer date={APIRates.date} />
     </>
   );
 };
