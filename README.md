@@ -2,7 +2,7 @@
 
 *This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
 
-My first simple web application that can convert given amount of money between 6 currencies. For now it's based on fixed currency rates but in the future it's gonna use API.
+My first simple web application that can convert given amount of money between 10 major currencies, as well as Polish Złoty. It fetches up-to-date currency rates from public API, courtesy of *[exchangerate.host](https://exchangerate.host/)*.
 
 ## Demo
 
@@ -22,7 +22,8 @@ My first simple web application that can convert given amount of money between 6
 
 - React.js
 - Node.js
-- styled-components
+- Styled-components
+- Axios
 
 ## Available Scripts
 
