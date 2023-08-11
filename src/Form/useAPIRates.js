@@ -8,7 +8,7 @@ export const useAPIRates = () => {
     const getRates = async () => {
       try {
         const response = await axios.get(
-          "https://api.exchangerate.host/latest?symbols=AUD,CAD,CHF,CNH,EUR,GBP,JPY,PLN,USD"
+          "https://api.exchangerate.host/latest?symbols=AUD,CAD,CHF,CNH,EUR,GBP,HKD,JPY,NZD,PLN,USD"
         );
 
         const { rates, date } = response.data;
@@ -26,6 +26,8 @@ export const useAPIRates = () => {
 
     setTimeout(getRates, 1000);
   }, []);
+
+  console.log(APIRates);
 
   return APIRates;
 };
