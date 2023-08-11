@@ -3,7 +3,7 @@ import { StyledLoading, LoadingImage } from "./styled"
 const Loading = () => (
   <StyledLoading>
     <LoadingImage
-      src="https://github.com/michal-owsiak/currency-converter-react/blob/main/src/assets/loading.png?raw=true" 
+      src="https://i.postimg.cc/FzwZmVqg/loading.png" 
       alt="Loading..."
       width="220"
       height="220"
