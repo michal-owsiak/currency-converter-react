@@ -9,18 +9,18 @@ const Result = ({ result }) => (
         </ResultFrom>
       </StyledResult>
     ) : (
-        <StyledResult>
-          <ResultFrom>
-            <BreakingCaption>
-              {result.sourceAmount.toFixed(2)}
-            </BreakingCaption>
-            &nbsp;{result.currencyFrom}&nbsp;= {""}
-          </ResultFrom>
+      <StyledResult>
+        <ResultFrom>
           <BreakingCaption>
-            {result.calculatedAmount.toFixed(2)}
+            {result.sourceAmount.toFixed(2)}
           </BreakingCaption>
-          &nbsp;{result.currencyTo}
-        </StyledResult>
+          &nbsp;{result.currencyFrom}&nbsp;= {""}
+        </ResultFrom>
+        <BreakingCaption>
+          {result.calculatedAmount.toFixed(2)}
+        </BreakingCaption>
+        &nbsp;{result.currencyTo}
+      </StyledResult>
     )}
   </>
 );

@@ -58,9 +58,9 @@ const Form = () => {
   };
 
   const onReset = () => {
-    setAmount("");
     setCurrencyFrom("EUR");
     setCurrencyTo("PLN");
+    setAmount("");
   };
 
   if (error) {
