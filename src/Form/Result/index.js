@@ -9,7 +9,6 @@ const Result = ({ result }) => (
         </ResultFrom>
       </StyledResult>
     ) : (
-      <>
         <StyledResult>
           <ResultFrom>
             <BreakingCaption>
@@ -22,7 +21,6 @@ const Result = ({ result }) => (
           </BreakingCaption>
           &nbsp;{result.currencyTo}
         </StyledResult>
-      </>
     )}
   </>
 );
