@@ -10,7 +10,7 @@ const Failure = () => (
     />
     <p>
       Something went wrong fetching the data.<br />
-      Please check your internet connection and reload the page.
+      Please check your internet connection and try reloading the page.
     </p>
   </StyledFailure>
 );

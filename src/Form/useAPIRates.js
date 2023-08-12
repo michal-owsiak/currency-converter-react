@@ -27,7 +27,5 @@ export const useAPIRates = () => {
     setTimeout(getRates, 1000);
   }, []);
 
-  console.log(APIRates);
-
   return { APIRates, error };
 };
