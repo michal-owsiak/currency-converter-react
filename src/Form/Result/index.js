@@ -5,8 +5,15 @@ const Result = ({ result }) => (
     {!result ? (
       <StyledResult>
         <ResultFrom>
-          0.00
+          <BreakingCaption>
+            0.00
+          </BreakingCaption>
+          &nbsp;EUR = {""}
         </ResultFrom>
+        <BreakingCaption>
+          0.00
+        </BreakingCaption>
+        &nbsp;PLN
       </StyledResult>
     ) : (
       <StyledResult>
