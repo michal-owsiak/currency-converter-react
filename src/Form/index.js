@@ -26,10 +26,9 @@ const Form = () => {
   const [currencyFrom, setCurrencyFrom] = useState("EUR");
   const [currencyTo, setCurrencyTo] = useState("PLN");
   const [amount, setAmount] = useState("");
-
   const [result, setResult] = useState(null);
 
-  const calculateRate = (currencyFrom, currencyTo) => {    
+  const calculateRate = (currencyFrom, currencyTo) => {
     if (!APIRates.rates) {
       return 0;
     }
@@ -51,16 +50,6 @@ const Form = () => {
     });
   };
 
-  // const initResult = () => {
-  //   setResult(undefined);
-  // };
-
-  // const initialState = {
-  //   currencyFrom: ratesData.rates[currencyFrom],
-  //   currencyTo: ratesData.rates[currencyFrom],
-  //   amount: ""
-  // };
-
   const rate = calculateRate(currencyFrom, currencyTo);
 
   const onSubmit = (event) => {
@@ -68,12 +57,11 @@ const Form = () => {
     calculateResult(currencyFrom, currencyTo, amount)
   };
 
-  // const onReset = () => {
-  //   setCurrencyFrom(initialState.currencyFrom);
-  //   setCurrencyTo(initialState.currencyTo);
-  //   setAmount(initialState.amount);
-  //   initResult();
-  // };
+  const onReset = () => {
+    setAmount("");
+    setCurrencyFrom("EUR");
+    setCurrencyTo("PLN");
+  };
 
   if (error) {
     return <Failure />;
@@ -93,7 +81,6 @@ const Form = () => {
             <Container>
               <LabelText>Amount</LabelText>
               <Input
-                required
                 value={amount}
                 onChange={({ target }) =>
                   setAmount(target.value)}
@@ -110,20 +97,19 @@ const Form = () => {
               <LabelText>From</LabelText>
               <Select
                 name="currencyFrom"
-                defaultValue="EUR"
+                value={currencyFrom}
                 onChange={({ target }) =>
                   setCurrencyFrom(target.value)}
               >
-                {!!APIRates.rates && Object.keys(APIRates.rates).map((currency => (
-                  <option
-                    key={currency}
-                    value={currency}
-                  >
-                    {typeof currencyLabels[currency] === "function"
-                      ? currencyLabels[currency]()
-                      : currencyLabels[currency]}
-                  </option>
-                )))}
+                {!!APIRates.rates &&
+                  Object.keys(APIRates.rates).map((currency => (
+                    <option
+                      key={currency}
+                      value={currency}
+                    >
+                      {currencyLabels[currency]}
+                    </option>
+                  )))}
               </Select>
             </CurrenciesContainer>
           </label>
@@ -132,17 +118,18 @@ const Form = () => {
               <LabelText>To</LabelText>
               <Select
                 name="currencyTo"
-                defaultValue="PLN"
+                value={currencyTo}
                 onChange={({ target }) => setCurrencyTo(target.value)}
               >
-                {!!APIRates.rates && Object.keys(APIRates.rates).map((currency => (
-                  <option
-                    key={currency}
-                    value={currency}
-                  >
-                    {currencyLabels[currency]}
-                  </option>
-                )))}
+                {!!APIRates.rates &&
+                  Object.keys(APIRates.rates).map((currency => (
+                    <option
+                      key={currency}
+                      value={currency}
+                    >
+                      {currencyLabels[currency]}
+                    </option>
+                  )))}
               </Select>
             </CurrenciesContainer>
           </label>
@@ -151,14 +138,12 @@ const Form = () => {
             currencyTo={currencyTo}
             rate={rate}
           />
-          <Result
-            result={result}
-          />
+          <Result result={result} />
           <ButtonsContainer>
             <Button>
               Convert
             </Button>
-            <ResetButton>
+            <ResetButton onClick={onReset}>
               Reset
             </ResetButton>
           </ButtonsContainer>
