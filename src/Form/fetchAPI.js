@@ -1,9 +1,8 @@
 import axios from "axios";
-import { API } from "./API";
 
-export const fetchAPI = async () => {
+export const fetchAPI = async (URL) => {
   try {
-    const response = await axios.get(API);
+    const response = await axios.get(URL);
 
     const { rates, date } = response.data;
 
