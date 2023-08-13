@@ -11,9 +11,13 @@ export const useAPIRates = () => {
       try {
         const response = await fetchAPI(API);
 
-        setAPIRates(response);
+        if (!response) {
+          setError("No response from database.")
+        } else {
+          setAPIRates(response);
+        }
       } catch (error) {
-        setError(error);
+        setError("Error while fetching database.");
       }
     };
    

@@ -12,6 +12,6 @@ export const fetchAPI = async () => {
       date
     };
   } catch (error) {
-    console.error("Error fetching exchange rates:", error);
+    console.error("Error fetching exchange rates.", error);
   }
 };
