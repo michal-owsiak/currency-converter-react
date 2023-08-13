@@ -12,7 +12,7 @@ export const Fieldset = styled.fieldset`
 `;
 
 export const Container = styled.div`
-	padding: 24px 0 24px;
+  padding: 24px 0 24px;
   display: grid;
   grid-template-columns: 80px 1fr;
   grid-gap: 34px;
