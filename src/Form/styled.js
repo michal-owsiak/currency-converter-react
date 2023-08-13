@@ -71,7 +71,7 @@ export const Select = styled.select`
   text-align: center;
 
 	&:hover {
-		background: ${({ theme }) => theme.color.zircon};
+		background-color: ${({ theme }) => theme.color.zircon};
   	border: 1.5px solid ${({ theme }) => theme.color.dodgerBlue};
   	transition: all 0.5s ease;
 	}
