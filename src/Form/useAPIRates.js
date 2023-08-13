@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import { API } from "./API"
+import { fetchAPI } from "./fetchAPI";
 
 export const useAPIRates = () => {
   const [APIRates, setAPIRates] = useState("");
@@ -8,22 +9,14 @@ export const useAPIRates = () => {
   useEffect(() => {
     const getRates = async () => {
       try {
-        const response = await axios.get(
-          "https://api.exchangerate.host/latest?symbols=AUD,CAD,CHF,CNH,EUR,GBP,HKD,JPY,NZD,PLN,USD&base=PLN"
-        );
+        const response = await fetchAPI(API);
 
-        const { rates, date } = response.data;
-
-        setAPIRates({
-          rates,
-          date
-        });
+        setAPIRates(response);
       } catch (error) {
-        console.error("Error fetching exchange rates:", error);
         setError(error);
       }
     };
-
+   
     setTimeout(getRates, 1000);
   }, []);
 

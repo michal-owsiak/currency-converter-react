@@ -23,6 +23,7 @@ My first simple web application that can convert given amount of money between 1
 - React.js
 - Node.js
 - Styled-components
+- Styled-normalize
 - Axios
 
 ## Available Scripts
