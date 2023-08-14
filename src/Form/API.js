@@ -13,6 +13,9 @@ const currencies = [
   "USD"
 ];
 
+const timestamp = new Date().getTime();
+
 export const API = `
-  https://api.exchangerate.host/latest?symbols=${currencies}&base=${baseCurrency}
+  https://api.exchangerate.host/latest?symbols=
+  ${currencies}&base=${baseCurrency}&_=${timestamp}
 `;
