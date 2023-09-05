@@ -7,6 +7,6 @@ export const StyledHeader = styled.h1`
   font-weight: 600;
   color: ${({ theme }) => theme.color.white};
   margin: 8px auto;
-  padding: 26px 0 0;
+  padding: 32px 0 0;
   line-height: 0.88;
 `;
