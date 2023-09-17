@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledFailure = styled.div`
   color: ${({ theme }) => theme.color.white};
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   text-align: center;
   line-height: 1.5;

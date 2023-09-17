@@ -9,8 +9,8 @@ const Failure = () => (
       height="160"
     />
     <p>
-      Something went wrong fetching the data.<br />
-      Please check your internet connection and try reloading the page.
+      Oops! Something went wrong fetching the data.<br />
+      Please try again later.
     </p>
   </StyledFailure>
 );
