@@ -1,11 +1,16 @@
 import { StyledFooter } from "./styled";
 
-const Footer = ({ date }) => {
-  const formattedDate = new Date(date).toLocaleDateString("en-US", {
+const Footer = () => {
+  const timestamp = new Date().getTime();
+  const date = new Date(timestamp);
+  
+  const formattedDate = date.toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
     year: "numeric",
   });
+  
+  console.log(formattedDate);
 
   return (
     <StyledFooter>

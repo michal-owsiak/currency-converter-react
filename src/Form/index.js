@@ -29,12 +29,12 @@ const Form = () => {
   const [result, setResult] = useState(null);
 
   const calculateRate = (currencyFrom, currencyTo) => {
-    if (!APIRates.rates) {
+    if (!APIRates.data) {
       return 0;
     }
 
-    const rateFrom = 1 / APIRates.rates[currencyFrom];
-    const rateTo = 1 / APIRates.rates[currencyTo];
+    const rateFrom = 1 / APIRates.data[currencyFrom];
+    const rateTo = 1 / APIRates.data[currencyTo];
 
     return rateFrom / rateTo;
   };
@@ -67,7 +67,7 @@ const Form = () => {
     return <Failure />;
   }
 
-  if (!APIRates.rates) {
+  if (!APIRates.data) {
     return <Loading />;
   }
 
@@ -101,8 +101,8 @@ const Form = () => {
                 onChange={({ target }) =>
                   setCurrencyFrom(target.value)}
               >
-                {!!APIRates.rates &&
-                  Object.keys(APIRates.rates).map((currency => (
+                {!!APIRates.data &&
+                  Object.keys(APIRates.data).map((currency => (
                     <option
                       key={currency}
                       value={currency}
@@ -121,8 +121,8 @@ const Form = () => {
                 value={currencyTo}
                 onChange={({ target }) => setCurrencyTo(target.value)}
               >
-                {!!APIRates.rates &&
-                  Object.keys(APIRates.rates).map((currency => (
+                {!!APIRates.data &&
+                  Object.keys(APIRates.data).map((currency => (
                     <option
                       key={currency}
                       value={currency}
@@ -149,7 +149,7 @@ const Form = () => {
           </ButtonsContainer>
         </Fieldset>
       </form>
-      <Footer date={APIRates.date} />
+      <Footer />
     </>
   );
 };
