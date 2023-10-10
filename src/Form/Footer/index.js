@@ -9,8 +9,6 @@ const Footer = () => {
     day: "numeric",
     year: "numeric",
   });
-  
-  console.log(formattedDate);
 
   return (
     <StyledFooter>
