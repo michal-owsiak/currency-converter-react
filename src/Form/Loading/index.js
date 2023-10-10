@@ -1,12 +1,11 @@
 import { StyledLoading, LoadingImage } from "./styled"
+import loading from "../../assets/loading.png";
 
 const Loading = () => (
   <StyledLoading>
     <LoadingImage
-      src="https://i.postimg.cc/FzwZmVqg/loading.png" 
+      src={loading}
       alt="Loading..."
-      width="220"
-      height="220"
     />
     Loading exchange rates...
   </StyledLoading>
