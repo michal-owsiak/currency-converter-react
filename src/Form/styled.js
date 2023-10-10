@@ -65,11 +65,11 @@ export const SelectContainer = styled.div`
   align-items: center;
   border: 1.5px solid ${({ theme }) => theme.color.silver};
   border-radius: 6px;
+  transition: 0.5s ease;
 
   &:hover {
     background-color: ${({ theme }) => theme.color.zircon};
     border: 1.5px solid ${({ theme }) => theme.color.dodgerBlue};
-    transition: all 0.5s ease;
   }
 `;
 
@@ -83,6 +83,11 @@ export const Select = styled.select`
   background: ${({ theme }) => theme.color.white};
   outline: ${({ theme }) => theme.color.dodgerBlue};
   text-align: center;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.color.zircon};
+    transition: all 0.5s ease;
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 12px 12px 12px 24px;
