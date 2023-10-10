@@ -82,7 +82,7 @@ const Form = () => {
         <Fieldset>
           <label>
             <Container>
-              <LabelText>Amount</LabelText>
+              <LabelText>Amount:</LabelText>
               <Input
                 value={amount}
                 onChange={({ target }) =>
@@ -97,7 +97,7 @@ const Form = () => {
           </label>
           <label>
             <CurrenciesContainer>
-              <LabelText>From</LabelText>
+              <LabelText>From:</LabelText>
               <SelectContainer>
                 <FlagIcon
                   src={currencyFlags[currencyFrom]}
@@ -125,7 +125,7 @@ const Form = () => {
           </label>
           <label>
             <CurrenciesContainer>
-              <LabelText>To</LabelText>
+              <LabelText>To:</LabelText>
               <SelectContainer>
                 <FlagIcon
                   src={currencyFlags[currencyTo]}
