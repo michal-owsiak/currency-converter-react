@@ -1,8 +1,9 @@
 import { StyledHeader } from "./styled";
+import logo from "../../assets/logo.svg"
 
 const Header = () => (
   <StyledHeader>
-      Currency Converter
+      <img src={logo} alt="Currency Converter" />
   </StyledHeader>
 );
 
