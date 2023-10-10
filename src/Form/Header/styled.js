@@ -9,4 +9,10 @@ export const StyledHeader = styled.h1`
   margin: 8px auto;
   padding: 32px 0 0;
   line-height: 0.88;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    max-width: 200px;
+    font-size: 30px;
+    padding: 22px 0 0;
+  }
 `;
