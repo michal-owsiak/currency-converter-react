@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/currency-converter/static/js/main.35d3a460.js",
+    "main.js": "/currency-converter/static/js/main.8ec86018.js",
     "static/js/787.ca7f2fcd.chunk.js": "/currency-converter/static/js/787.ca7f2fcd.chunk.js",
     "static/media/HKD.png": "/currency-converter/static/media/HKD.d8cba89e47919fd3e183.png",
     "static/media/EUR.png": "/currency-converter/static/media/EUR.4aeea4b3410c611621b5.png",
@@ -13,11 +13,12 @@
     "static/media/CAD.png": "/currency-converter/static/media/CAD.07849426f9b46d419f07.png",
     "static/media/PLN.png": "/currency-converter/static/media/PLN.a498d547b8c6fc3ccf55.png",
     "static/media/CHF.png": "/currency-converter/static/media/CHF.c677c6035aebb9762292.png",
+    "static/media/logo.svg": "/currency-converter/static/media/logo.253a5102fe68f05146d74ae604cbae76.svg",
     "index.html": "/currency-converter/index.html",
-    "main.35d3a460.js.map": "/currency-converter/static/js/main.35d3a460.js.map",
+    "main.8ec86018.js.map": "/currency-converter/static/js/main.8ec86018.js.map",
     "787.ca7f2fcd.chunk.js.map": "/currency-converter/static/js/787.ca7f2fcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.35d3a460.js"
+    "static/js/main.8ec86018.js"
   ]
 }
