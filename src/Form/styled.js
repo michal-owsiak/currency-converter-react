@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Swap from "../assets/swap.png";
 
 export const Fieldset = styled.fieldset`
   background: ${({ theme }) => theme.color.white};
@@ -92,6 +93,40 @@ export const FlagIcon = styled.img`
   height: 20px;
   width: 20px;
   margin-left: 10px;
+`;
+
+export const SwapButtonContainer = styled.div`
+  padding-left: 210px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+`
+
+export const SwapButton = styled.div`
+  background: url(${Swap});
+  background-size: contain;
+  width: 26px;
+  height: 26px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: 0.3s;
+  transform: rotate(
+    ${props => (props.isRotated ? "180deg" : "0")}
+  );
+
+  &:hover {
+    opacity: 0.91;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    width: 32px;
+    height: 32px;
+    margin: 12px 0;
+  }
 `;
 
 export const ButtonsContainer = styled.div`

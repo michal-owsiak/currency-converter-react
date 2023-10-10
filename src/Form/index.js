@@ -8,8 +8,10 @@ import {
   FlagIcon,
   SelectContainer,
   Select,
+  SwapButton,
   Button,
-  ResetButton
+  ResetButton,
+  SwapButtonContainer
 } from "./styled";
 import { useState } from "react";
 import Result from "./Result";
@@ -20,8 +22,7 @@ import Header from "./Header";
 import Clock from "./Clock";
 import Footer from "./Footer"
 import { useAPIRates } from "./useAPIRates";
-import { currencyLabels } from "./currencyLabels"
-import { currencyFlags } from "./currencyFlags";
+import { currencyLabels, currencyFlags } from "./currencyData"
 
 const Form = () => {
   const { APIRates, error } = useAPIRates();
@@ -30,6 +31,7 @@ const Form = () => {
   const [currencyTo, setCurrencyTo] = useState("PLN");
   const [amount, setAmount] = useState("");
   const [result, setResult] = useState(null);
+  const [isRotated, setIsRotated] = useState(false)
 
   const calculateRate = (currencyFrom, currencyTo) => {
     if (!APIRates.data) {
@@ -64,6 +66,16 @@ const Form = () => {
     setCurrencyFrom("EUR");
     setCurrencyTo("PLN");
     setAmount("");
+  };
+
+  const onSwap = () => {
+    setCurrencyFrom(currencyTo);
+    setCurrencyTo(currencyFrom);
+  };
+
+  const handleSwapClick = () => {
+    setIsRotated(!isRotated);
+    onSwap();
   };
 
   if (error) {
@@ -123,6 +135,11 @@ const Form = () => {
               </SelectContainer>
             </CurrenciesContainer>
           </label>
+          <SwapButtonContainer>
+            <SwapButton
+              isRotated={isRotated}
+              onClick={handleSwapClick} />
+          </SwapButtonContainer>
           <label>
             <CurrenciesContainer>
               <LabelText>To:</LabelText>

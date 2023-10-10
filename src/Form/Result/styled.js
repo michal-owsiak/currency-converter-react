@@ -6,7 +6,7 @@ export const StyledResult = styled.p`
   font-size: 22px;
 	font-weight: 700;
   color: ${({ theme }) => theme.color.dodgerBlue};
-  margin: 22px auto 28px;
+  margin: 10px auto 16px;
   line-height: 1.4;
 `;
 
