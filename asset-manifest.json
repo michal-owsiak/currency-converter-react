@@ -1,12 +1,22 @@
 {
   "files": {
-    "main.js": "/currency-converter/static/js/main.7a6037bc.js",
+    "main.js": "/currency-converter/static/js/main.1e2eca21.js",
     "static/js/787.ca7f2fcd.chunk.js": "/currency-converter/static/js/787.ca7f2fcd.chunk.js",
+    "static/media/HKD.png": "/currency-converter/static/media/HKD.d8cba89e47919fd3e183.png",
+    "static/media/EUR.png": "/currency-converter/static/media/EUR.4aeea4b3410c611621b5.png",
+    "static/media/USD.png": "/currency-converter/static/media/USD.4d9d990626a3df96a265.png",
+    "static/media/AUD.png": "/currency-converter/static/media/AUD.7832eac2a77237b86799.png",
+    "static/media/GBP.png": "/currency-converter/static/media/GBP.b9a2ba74e5f8a55977e7.png",
+    "static/media/NZD.png": "/currency-converter/static/media/NZD.9cc82a257ae04ac4da26.png",
+    "static/media/JPY.png": "/currency-converter/static/media/JPY.a16c066dbe1e0ca0560c.png",
+    "static/media/CAD.png": "/currency-converter/static/media/CAD.07849426f9b46d419f07.png",
+    "static/media/PLN.png": "/currency-converter/static/media/PLN.a498d547b8c6fc3ccf55.png",
+    "static/media/CHF.png": "/currency-converter/static/media/CHF.c677c6035aebb9762292.png",
     "index.html": "/currency-converter/index.html",
-    "main.7a6037bc.js.map": "/currency-converter/static/js/main.7a6037bc.js.map",
+    "main.1e2eca21.js.map": "/currency-converter/static/js/main.1e2eca21.js.map",
     "787.ca7f2fcd.chunk.js.map": "/currency-converter/static/js/787.ca7f2fcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.7a6037bc.js"
+    "static/js/main.1e2eca21.js"
   ]
 }
