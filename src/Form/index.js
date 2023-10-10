@@ -5,6 +5,8 @@ import {
   ButtonsContainer,
   LabelText,
   Input,
+  FlagIcon,
+  SelectContainer,
   Select,
   Button,
   ResetButton
@@ -19,6 +21,7 @@ import Clock from "./Clock";
 import Footer from "./Footer"
 import { useAPIRates } from "./useAPIRates";
 import { currencyLabels } from "./currencyLabels"
+import { currencyFlags } from "./currencyFlags";
 
 const Form = () => {
   const { APIRates, error } = useAPIRates();
@@ -95,42 +98,56 @@ const Form = () => {
           <label>
             <CurrenciesContainer>
               <LabelText>From</LabelText>
-              <Select
-                name="currencyFrom"
-                value={currencyFrom}
-                onChange={({ target }) =>
-                  setCurrencyFrom(target.value)}
-              >
-                {!!APIRates.data &&
-                  Object.keys(APIRates.data).map((currency => (
-                    <option
-                      key={currency}
-                      value={currency}
-                    >
-                      {currencyLabels[currency]}
-                    </option>
-                  )))}
-              </Select>
+              <SelectContainer>
+                <FlagIcon
+                  src={currencyFlags[currencyFrom]}
+                  alt={`${currencyFrom} flag`}
+                  className="currency-flag"
+                />
+                <Select
+                  name="currencyFrom"
+                  value={currencyFrom}
+                  onChange={({ target }) =>
+                    setCurrencyFrom(target.value)}
+                >
+                  {!!APIRates.data &&
+                    Object.keys(APIRates.data).map((currency => (
+                      <option
+                        key={currency}
+                        value={currency}
+                      >
+                        {currencyLabels[currency]}
+                      </option>
+                    )))}
+                </Select>
+              </SelectContainer>
             </CurrenciesContainer>
           </label>
           <label>
             <CurrenciesContainer>
               <LabelText>To</LabelText>
-              <Select
-                name="currencyTo"
-                value={currencyTo}
-                onChange={({ target }) => setCurrencyTo(target.value)}
-              >
-                {!!APIRates.data &&
-                  Object.keys(APIRates.data).map((currency => (
-                    <option
-                      key={currency}
-                      value={currency}
-                    >
-                      {currencyLabels[currency]}
-                    </option>
-                  )))}
-              </Select>
+              <SelectContainer>
+                <FlagIcon
+                  src={currencyFlags[currencyTo]}
+                  alt={`${currencyTo} flag`}
+                  className="currency-flag"
+                />
+                <Select
+                  name="currencyTo"
+                  value={currencyTo}
+                  onChange={({ target }) => setCurrencyTo(target.value)}
+                >
+                  {!!APIRates.data &&
+                    Object.keys(APIRates.data).map((currency => (
+                      <option
+                        key={currency}
+                        value={currency}
+                      >
+                        {currencyLabels[currency]}
+                      </option>
+                    )))}
+                </Select>
+              </SelectContainer>
             </CurrenciesContainer>
           </label>
           <Rate

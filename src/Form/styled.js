@@ -58,27 +58,39 @@ export const Input = styled.input`
   }
 `;
 
-export const Select = styled.select`
+export const SelectContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   border: 1.5px solid ${({ theme }) => theme.color.silver};
   border-radius: 6px;
-  width: 100%;
-  padding: 10px;
-  font-size: 13px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.color.tundora};
-  background: ${({ theme }) => theme.color.white};
-  outline: ${({ theme }) => theme.color.dodgerBlue};
-  text-align: center;
 
   &:hover {
     background-color: ${({ theme }) => theme.color.zircon};
     border: 1.5px solid ${({ theme }) => theme.color.dodgerBlue};
     transition: all 0.5s ease;
   }
+`;
+
+export const Select = styled.select`
+  border: none;
+  width: 80%;
+  font-size: 12px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.color.tundora};
+  background: ${({ theme }) => theme.color.white};
+  outline: ${({ theme }) => theme.color.dodgerBlue};
+  text-align: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 12px 12px 12px 24px;
   }
+`;
+
+export const FlagIcon = styled.img`
+  height: 20px;
+  width: 20px;
+  margin: 10px;
 `;
 
 export const ButtonsContainer = styled.div`
