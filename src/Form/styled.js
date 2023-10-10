@@ -74,7 +74,8 @@ export const SelectContainer = styled.div`
 
 export const Select = styled.select`
   border: none;
-  width: 80%;
+  padding: 10px 0;
+  width: 85%;
   font-size: 12px;
   font-weight: 600;
   color: ${({ theme }) => theme.color.tundora};
@@ -90,7 +91,7 @@ export const Select = styled.select`
 export const FlagIcon = styled.img`
   height: 20px;
   width: 20px;
-  margin: 10px;
+  margin-left: 10px;
 `;
 
 export const ButtonsContainer = styled.div`
@@ -100,7 +101,7 @@ export const ButtonsContainer = styled.div`
 export const Button = styled.button`
   display: block;
   cursor: pointer;
-  width: 90%;
+  width: 100%;
   height: 55px;
   color: ${({ theme }) => theme.color.white};
   border: 1.5px solid ${({ theme }) => theme.color.blueRibbon};
