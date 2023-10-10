@@ -98,7 +98,8 @@ const Form = () => {
               <Input
                 value={amount}
                 onChange={({ target }) =>
-                  setAmount(target.value)}
+                  setAmount(target.value)
+                }
                 type="number"
                 name="amount"
                 step="0.01"
@@ -120,7 +121,8 @@ const Form = () => {
                   name="currencyFrom"
                   value={currencyFrom}
                   onChange={({ target }) =>
-                    setCurrencyFrom(target.value)}
+                    setCurrencyFrom(target.value)
+                  }
                 >
                   {!!APIRates.data &&
                     Object.keys(APIRates.data).map((currency => (

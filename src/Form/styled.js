@@ -113,7 +113,7 @@ export const SwapButton = styled.div`
   height: 26px;
   margin: 8px 0;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.5s;
   transform: rotate(
     ${props => (props.isRotated ? "180deg" : "0")}
   );
