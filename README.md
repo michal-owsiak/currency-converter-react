@@ -1,53 +1,59 @@
-# Currency Converter in React.js
+# **Currency Converter**
 
-*This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
+***This project was bootstrapped with [**Create React App**](https://github.com/facebook/create-react-app).***
 
 My first simple web application that can convert given amount of money between 9 major currencies, as well as Polish Złoty. It fetches up-to-date currency rates from public API, courtesy of *[freecurrencyapi.com](https://freecurrencyapi.com/)*.
 
-## Demo
+### **Demo**
 
-[CLICK HERE](https://michal-owsiak.github.io/currency-converter/) and try it on your own, or see a demonstration below:
+[https://bit.ly/currency-converter-app](https://bit.ly/currency-converter-app)
 
-![demo](https://github.com/michal-owsiak/currency-converter/blob/main/demo.gif?raw=true)
+![screenshot](https://github.com/michal-owsiak/currency-converter/blob/main/demo.gif?raw=true)
 
-## Tools used
+## **Tools Used**
 
-### Languages
+### **Languages**
 
+```bash
 - JavaScript (ES6+) with JSX Syntax
 - CSS
 - HTML
+```
 
-### Libraries & environments
+### **Libraries**
 
-- React.js
-- Styled-components
-- Styled-normalize
+```bash
+- React
 - Axios
+- Styled-Components
+```
 
-## Available Scripts
+## **Installation and Usage**
 
-In the project directory, you can run:
+To get started with this project, follow these steps:
 
-### `npm start`
+1. Clone this repository.
+2. Run `npm install` to install the required dependencies.
+3. Run `npm start` to launch the development server. The app will be available at [http://localhost:3000](http://localhost:3000).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## **Deployment**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To build the app for production, use:
 
-### `npm run build`
+```bash
+npm run build
+```
+This command creates an optimized production build in the build folder, ready for deployment.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm run deploy
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This command is a convenient shortcut that both builds the application (as a predeploy action) and deploys it. It's useful for quickly deploying your app to your hosting platform.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
+```bash
+npm run eject
+```
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
