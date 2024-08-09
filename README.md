@@ -6,7 +6,7 @@ My first simple web application that can convert given amount of money between 9
 
 ### **Demo**
 
-[https://bit.ly/currency-converter-app](https://bit.ly/currency-converter-app)
+[https://michal-owsiak.github.io/currency-converter/](https://michal-owsiak.github.io/currency-converter/)
 
 ![screenshot](https://github.com/michal-owsiak/currency-converter/blob/main/demo.gif?raw=true)
 
